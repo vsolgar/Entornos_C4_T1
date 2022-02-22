@@ -12,21 +12,21 @@ class CribaTest {
     @Test
     void generarPrimosTest() {
         myCriba1 = new Criba(5);
-        vectorB2 = Criba.generarPrimos(5);
+        vectorB2 = Criba.generarVectorNumeros(5);
         assertArrayEquals(vectorB1,vectorB2);
 
         vectorB1 = new boolean[0];
         assertFalse(vectorB1.equals(vectorB2));
         myCriba1 = new Criba(1);
 
-        vectorB2 = Criba.generarPrimos(1);
+        vectorB2 = Criba.generarVectorNumeros(1);
         assertArrayEquals(vectorB1,vectorB2);
     }
 
     @Test
     void devuelvePrimosTest(){
         myCriba1 = new Criba(5);
-        vectorI2 = Criba.devuelvePrimos(vectorB1);
+        vectorI2 = Criba.devuelveVectorPrimos(vectorB1);
         assertArrayEquals(vectorI1,vectorI2);
     }
 
@@ -34,7 +34,7 @@ class CribaTest {
     void getCuentaTest(){
         myCriba1 = new Criba(5);
         int primos = 3;
-        assertEquals(primos, myCriba1.getCuenta(vectorB1));
+        assertEquals(primos, myCriba1.getCuentaPrimos(vectorB1));
 
     }
 
@@ -42,7 +42,7 @@ class CribaTest {
     @Test
     void main() {
         myCriba1 = new Criba(5);
-        assertEquals(3,myCriba1.getCuenta(vectorB1));
+        assertEquals(3,myCriba1.getCuentaPrimos(vectorB1));
     }
 
 }
