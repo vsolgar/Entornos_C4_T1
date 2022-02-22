@@ -12,14 +12,14 @@ class CribaTest {
     @Test
     void generarPrimosTest() {
         myCriba1 = new Criba(5);
-        vectorB2 = Criba.generarVectorNumeros(5);
+        vectorB2 = Criba.generarVectorBooleanoNumeros(5);
         assertArrayEquals(vectorB1,vectorB2);
 
         vectorB1 = new boolean[0];
         assertFalse(vectorB1.equals(vectorB2));
         myCriba1 = new Criba(1);
 
-        vectorB2 = Criba.generarVectorNumeros(1);
+        vectorB2 = Criba.generarVectorBooleanoNumeros(1);
         assertArrayEquals(vectorB1,vectorB2);
     }
 
